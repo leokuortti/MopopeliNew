@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://r77cg8g0xnex"]
+
+[ext_resource type="Script" path="res://level_menu_1.gd" id="1_q0dt7"]
+
+[node name="Level-menu1" type="Node2D"]
+position = Vector2(23, 15)
+script = ExtResource("1_q0dt7")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Next-level" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 568.0
+offset_top = 235.0
+offset_right = 786.0
+offset_bottom = 343.0
+text = "Next level
+"
+
+[node name="MainMenu" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 330.0
+offset_top = 234.0
+offset_right = 527.0
+offset_bottom = 343.0
+text = "Main Menu"
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 410.0
+offset_top = 103.0
+offset_right = 711.0
+offset_bottom = 226.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "Level completed"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Control/Next-level" to="." method="_on_nextlevel_pressed"]
+[connection signal="pressed" from="Control/MainMenu" to="." method="_on_main_menu_pressed"]

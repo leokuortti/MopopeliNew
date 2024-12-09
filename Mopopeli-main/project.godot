@@ -1,0 +1,35 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="BBB&P"
+run/main_scene="res://menu.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_height"
+
+[dotnet]
+
+project/assembly_name="BBB&P"
+
+[editor]
+
+version_control/autoload_on_startup=true
+
+[rendering]
+
+environment/defaults/default_clear_color=Color(0.373384, 0.428361, 1, 1)

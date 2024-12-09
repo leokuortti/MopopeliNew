@@ -1,0 +1,107 @@
+[gd_scene load_steps=5 format=3 uid="uid://bktyajiqqbgkn"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_cmhl4"]
+[ext_resource type="Texture2D" uid="uid://c2no432u2ytjo" path="res://mops.png" id="2_8ldwd"]
+[ext_resource type="FontFile" uid="uid://d23k1fqtjvq37" path="res://joystix monospace.otf" id="3_c6b18"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_evp2q"]
+texture = ExtResource("2_8ldwd")
+modulate_color = Color(0.588235, 0.588235, 0.588235, 1)
+
+[node name="Menu" type="Node2D"]
+position = Vector2(-58, 142)
+script = ExtResource("1_cmhl4")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 59.0
+offset_top = -142.0
+offset_right = 1234.0
+offset_bottom = 525.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_evp2q")
+
+[node name="Button_manager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 278.0
+offset_top = 44.0
+offset_right = 984.0
+offset_bottom = 426.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Start" type="Button" parent="Button_manager"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -106.0
+offset_right = 106.0
+offset_bottom = 93.0
+grow_horizontal = 2
+theme_override_colors/font_hover_color = Color(1, 0.47451, 0, 1)
+theme_override_fonts/font = ExtResource("3_c6b18")
+theme_override_font_sizes/font_size = 50
+text = "Level menu"
+
+[node name="Options" type="Button" parent="Button_manager"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -106.0
+offset_top = -46.0
+offset_right = 106.0
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(1, 0.47451, 0, 1)
+theme_override_fonts/font = ExtResource("3_c6b18")
+theme_override_font_sizes/font_size = 50
+text = "Options"
+
+[node name="Quit" type="Button" parent="Button_manager"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -106.0
+offset_top = -91.0
+offset_right = 106.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_hover_color = Color(1, 0.47451, 0, 1)
+theme_override_fonts/font = ExtResource("3_c6b18")
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 278.0
+offset_top = -109.0
+offset_right = 940.0
+offset_bottom = 11.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("3_c6b18")
+theme_override_font_sizes/font_size = 100
+text = "Mopopeli"
+
+[connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button_manager/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]

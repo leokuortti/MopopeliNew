@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://ct0n7djmiehyg"]
+
+[ext_resource type="PackedScene" uid="uid://b6on3xx3nismd" path="res://Scenes/pelaaja.tscn" id="1_e6av1"]
+
+[node name="Kentta1" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-337, 501, 1441, 692, 2634, 412, 3752, 463, 4908, -45, 6241, 196, 6838, 463, 8057, 400, 8057, 400, 7752, 2266, -1277, 1911, -1391, -413)
+
+[node name="Pelaaja" parent="." instance=ExtResource("1_e6av1")]
+
+[node name="Camera2D" type="Camera2D" parent="Pelaaja"]

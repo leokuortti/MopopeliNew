@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6on3xx3nismd"]
+
+[ext_resource type="Script" path="res://code/pelaaja.gd" id="1_0o10d"]
+[ext_resource type="PackedScene" uid="uid://b8lpll2do8n14" path="res://Scenes/rengas.tscn" id="1_746m3"]
+[ext_resource type="Texture2D" uid="uid://3hmgaqcxrm2q" path="res://Images/Car/mopo3.png" id="3_drffa"]
+[ext_resource type="Texture2D" uid="uid://87fhctdad060" path="res://Images/Characters/ukko.png" id="4_m0br6"]
+
+[node name="Pelaaja" type="RigidBody2D" groups=["pelaaja", "wheel"]]
+position = Vector2(97, 27)
+script = ExtResource("1_0o10d")
+
+[node name="WheelHolder" type="PinJoint2D" parent="."]
+position = Vector2(-145, 89)
+node_a = NodePath("..")
+node_b = NodePath("Rengas")
+softness = 2.5
+
+[node name="Rengas" parent="WheelHolder" groups=["wheel"] instance=ExtResource("1_746m3")]
+position = Vector2(0, -1)
+gravity_scale = 1.0
+
+[node name="WheelHolder2" type="PinJoint2D" parent="."]
+position = Vector2(171, 75)
+node_a = NodePath("..")
+node_b = NodePath("Rengas")
+softness = 2.5
+
+[node name="Rengas" parent="WheelHolder2" instance=ExtResource("1_746m3")]
+position = Vector2(-1, 5)
+gravity_scale = 1.0
+
+[node name="Mopo" type="Sprite2D" parent="."]
+position = Vector2(3, -3)
+texture = ExtResource("3_drffa")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-236, -178)
+polygon = PackedVector2Array(144, 195, 18.0197, 191.73, 19, 253, 9, 254, 10, 272, 89, 269, 327, 252, 323, 182, 347, 148, 404, 269, 394, 266, 422, 252, 392, 169, 482, 123, 378, 86, 350, 30, 308, -8, 235, 88, -2, 74)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(34, -100)
+scale = Vector2(1.79643, 1.78605)
+texture = ExtResource("4_m0br6")

@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=3 uid="uid://7i61f3di6rb2"]
+
+[ext_resource type="Script" path="res://level_menu.gd" id="1_7dxrj"]
+
+[node name="LevelMenu" type="Node2D"]
+script = ExtResource("1_7dxrj")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Level 1" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 260.0
+offset_right = 409.0
+offset_bottom = 363.0
+text = "Level 1
+"
+
+[node name="Level 2" type="Button" parent="Control"]
+layout_mode = 1
+offset_left = 450.0
+offset_top = 258.0
+offset_right = 638.0
+offset_bottom = 365.0
+text = "Level 2"
+
+[node name="Level 3" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 679.0
+offset_top = 258.0
+offset_right = 875.0
+offset_bottom = 366.0
+text = "Level 3
+"
+
+[node name="MainMenu" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 109.0
+offset_bottom = 44.0
+text = "Main Menu"
+
+[connection signal="pressed" from="Control/Level 1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="Control/Level 2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="Control/Level 3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="Control/MainMenu" to="." method="_on_main_menu_pressed"]
