@@ -1,12 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://b6on3xx3nismd"]
+[gd_scene load_steps=6 format=3 uid="uid://b6on3xx3nismd"]
 
 [ext_resource type="Script" path="res://code/pelaaja.gd" id="1_0o10d"]
 [ext_resource type="PackedScene" uid="uid://b8lpll2do8n14" path="res://Scenes/rengas.tscn" id="1_746m3"]
-[ext_resource type="Texture2D" uid="uid://3hmgaqcxrm2q" path="res://Images/Car/mopo3.png" id="3_drffa"]
+[ext_resource type="Texture2D" uid="uid://dqsff6hud28he" path="res://Images/Car/moponew.png" id="3_vexeq"]
 [ext_resource type="Texture2D" uid="uid://87fhctdad060" path="res://Images/Characters/ukko.png" id="4_m0br6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g28yq"]
+radius = 21.7386
 
 [node name="Pelaaja" type="RigidBody2D" groups=["pelaaja", "wheel"]]
 position = Vector2(97, 27)
+collision_layer = 2
 script = ExtResource("1_0o10d")
 
 [node name="WheelHolder" type="PinJoint2D" parent="."]
@@ -26,18 +30,30 @@ node_b = NodePath("Rengas")
 softness = 2.5
 
 [node name="Rengas" parent="WheelHolder2" instance=ExtResource("1_746m3")]
-position = Vector2(-1, 5)
+position = Vector2(-4, -1)
 gravity_scale = 1.0
 
 [node name="Mopo" type="Sprite2D" parent="."]
-position = Vector2(3, -3)
-texture = ExtResource("3_drffa")
+position = Vector2(32, -2.99997)
+scale = Vector2(1.64643, 1.60342)
+texture = ExtResource("3_vexeq")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(-236, -178)
+position = Vector2(-234, -171)
 polygon = PackedVector2Array(147, 180, 48, 212, 26, 243, 29, 271, 89, 269, 328, 254, 315, 174, 347, 148, 400, 265, 423, 253, 391, 178, 363, 126, 403, 115, 465, 132, 433, 102, 367, 89, 346, 34, 310, 9, 294, 71, 241, 84, 158, 98, 101, 86, 14, 84, 86, 102, 70, 110, 104, 152)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Ukko" type="Sprite2D" parent="."]
 position = Vector2(34, -100)
 scale = Vector2(1.79643, 1.78605)
 texture = ExtResource("4_m0br6")
+
+[node name="HeadArea" type="Area2D" parent="Ukko"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ukko/HeadArea"]
+position = Vector2(-32.2862, -80.6248)
+shape = SubResource("CircleShape2D_g28yq")
+one_way_collision_margin = 0.0
+
+[connection signal="area_entered" from="Ukko/HeadArea" to="." method="_on_head_area_area_entered"]
+[connection signal="body_entered" from="Ukko/HeadArea" to="." method="_on_head_area_body_entered"]

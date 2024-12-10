@@ -1,47 +1,71 @@
-[gd_scene load_steps=2 format=3 uid="uid://r77cg8g0xnex"]
+[gd_scene load_steps=6 format=3 uid="uid://r77cg8g0xnex"]
 
 [ext_resource type="Script" path="res://level_menu_1.gd" id="1_q0dt7"]
+[ext_resource type="Texture2D" uid="uid://c2no432u2ytjo" path="res://mops.png" id="2_mdbi4"]
+[ext_resource type="FontFile" uid="uid://d23k1fqtjvq37" path="res://joystix monospace.otf" id="3_rg5fb"]
+[ext_resource type="AudioStream" uid="uid://brceutmm1gi3n" path="res://Audio/Music (online-audio-converter.com).mp3" id="4_s5bb3"]
 
-[node name="Level-menu1" type="Node2D"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e8ghd"]
+texture = ExtResource("2_mdbi4")
+modulate_color = Color(0.589096, 0.589096, 0.589096, 1)
+
+[node name="Next_level1" type="Node2D"]
 position = Vector2(23, 15)
 script = ExtResource("1_q0dt7")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -25.0
+offset_top = -15.0
+offset_right = 1133.0
+offset_bottom = 637.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_e8ghd")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
+offset_top = 20.0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 60.0
 
 [node name="Next-level" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 568.0
-offset_top = 235.0
-offset_right = 786.0
-offset_bottom = 343.0
+offset_left = 582.0
+offset_top = 243.0
+offset_right = 760.0
+offset_bottom = 331.0
+theme_override_colors/font_hover_color = Color(1, 0.47451, 0, 1)
+theme_override_fonts/font = ExtResource("3_rg5fb")
 text = "Next level
 "
 
 [node name="MainMenu" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 330.0
-offset_top = 234.0
-offset_right = 527.0
-offset_bottom = 343.0
+offset_left = 336.0
+offset_top = 243.0
+offset_right = 517.0
+offset_bottom = 333.0
+theme_override_colors/font_hover_color = Color(1, 0.47451, 0, 1)
+theme_override_fonts/font = ExtResource("3_rg5fb")
 text = "Main Menu"
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 410.0
-offset_top = 103.0
-offset_right = 711.0
-offset_bottom = 226.0
+offset_left = 238.0
+offset_top = 140.0
+offset_right = 859.0
+offset_bottom = 263.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("3_rg5fb")
+theme_override_font_sizes/font_size = 50
 text = "Level completed"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_s5bb3")
+autoplay = true
 
 [connection signal="pressed" from="Control/Next-level" to="." method="_on_nextlevel_pressed"]
 [connection signal="pressed" from="Control/MainMenu" to="." method="_on_main_menu_pressed"]

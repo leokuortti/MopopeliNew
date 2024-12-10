@@ -1,14 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://cimkxkivdsujt"]
+[gd_scene load_steps=6 format=3 uid="uid://cimkxkivdsujt"]
 
 [ext_resource type="Script" path="res://next_level_2.gd" id="1_2dd1d"]
+[ext_resource type="Texture2D" uid="uid://c2no432u2ytjo" path="res://mops.png" id="2_xuogu"]
+[ext_resource type="FontFile" uid="uid://d23k1fqtjvq37" path="res://joystix monospace.otf" id="3_ublgf"]
+[ext_resource type="AudioStream" uid="uid://brceutmm1gi3n" path="res://Audio/Music (online-audio-converter.com).mp3" id="4_5orao"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ykj8"]
+texture = ExtResource("2_xuogu")
+modulate_color = Color(0.589096, 0.589096, 0.589096, 1)
 
 [node name="Next-level2" type="Node2D"]
 script = ExtResource("1_2dd1d")
 
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1158.0
+offset_bottom = 650.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_3ykj8")
+
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
+offset_left = -18.0
+offset_right = 22.0
 offset_bottom = 40.0
 
 [node name="Next level 2" type="Button" parent="Control"]
@@ -17,6 +30,8 @@ offset_left = 610.0
 offset_top = 262.0
 offset_right = 791.0
 offset_bottom = 359.0
+theme_override_colors/font_hover_color = Color(1, 0.47451, 0, 1)
+theme_override_fonts/font = ExtResource("3_ublgf")
 text = "Next Level"
 
 [node name="MenuMenu" type="Button" parent="Control"]
@@ -25,21 +40,28 @@ offset_left = 397.0
 offset_top = 262.0
 offset_right = 572.0
 offset_bottom = 359.0
+theme_override_colors/font_hover_color = Color(1, 0.47451, 0, 1)
+theme_override_fonts/font = ExtResource("3_ublgf")
 text = "Main Menu"
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 437.0
-offset_top = 132.0
-offset_right = 738.0
-offset_bottom = 255.0
+offset_left = 265.0
+offset_top = 139.0
+offset_right = 886.0
+offset_bottom = 262.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("3_ublgf")
+theme_override_font_sizes/font_size = 50
 text = "Level completed"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_5orao")
+autoplay = true
 
 [connection signal="pressed" from="Control/Next level 2" to="." method="_on_next_level_2_pressed"]
 [connection signal="pressed" from="Control/MenuMenu" to="." method="_on_menu_menu_pressed"]

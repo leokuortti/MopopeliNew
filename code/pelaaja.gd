@@ -4,12 +4,23 @@ extends RigidBody2D
 var wheels = []
 @export var speed: float = 250000  # Adjust this value as needed
 @export var max_speed: float = 10000  # Maximum speed for the wheels
-@export var back_speed: float = 3000  # Reverse speed adjustment
+@export var back_speed: float = 5000  # Reverse speed adjustment
 @export var move_speed: float = 500.0  # General movement speed
 
 # Called when the node is ready
 func _ready() -> void:
 	wheels = get_tree().get_nodes_in_group("wheel")
+
+	# Create the head area hitbox
+	var head_area = Area2D.new()
+	var head_shape = CollisionShape2D.new()
+	head_shape.shape = RectangleShape2D.new()  # Define the shape for the head hitbox
+	head_area.add_child(head_shape)
+	head_area.position = Vector2(0, -50)  # Adjust position above the vehicle's body
+	add_child(head_area)
+
+	# Connect the signal to detect collisions
+	head_area.connect("body_entered", Callable(self, "_on_head_hit"))  # Correct usage of Callable
 
 # Handle physics and input
 func _physics_process(delta: float) -> void:
@@ -37,4 +48,9 @@ func _physics_process(delta: float) -> void:
 func restart_level() -> void:
 	var current_scene = get_tree().current_scene
 	if current_scene:
+		get_tree().reload_current_scene()
+
+func _on_head_area_body_entered(body: Node) -> void:
+	if body.is_in_group("Ground"):  # Ensure the ground nodes are in the "Ground" group
+		print("Head hit the ground!")
 		get_tree().reload_current_scene()

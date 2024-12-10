@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bktyajiqqbgkn"]
+[gd_scene load_steps=6 format=3 uid="uid://bktyajiqqbgkn"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_cmhl4"]
 [ext_resource type="Texture2D" uid="uid://c2no432u2ytjo" path="res://mops.png" id="2_8ldwd"]
 [ext_resource type="FontFile" uid="uid://d23k1fqtjvq37" path="res://joystix monospace.otf" id="3_c6b18"]
+[ext_resource type="AudioStream" uid="uid://brceutmm1gi3n" path="res://Audio/Music (online-audio-converter.com).mp3" id="4_p28kt"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_evp2q"]
 texture = ExtResource("2_8ldwd")
@@ -20,8 +21,8 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 59.0
 offset_top = -142.0
-offset_right = 1234.0
-offset_bottom = 525.0
+offset_right = 1211.0
+offset_bottom = 507.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_evp2q")
@@ -92,15 +93,30 @@ theme_override_font_sizes/font_size = 50
 text = "Quit"
 
 [node name="Label" type="Label" parent="."]
-offset_left = 278.0
-offset_top = -109.0
-offset_right = 940.0
-offset_bottom = 11.0
+offset_left = 308.0
+offset_top = -108.0
+offset_right = 970.0
+offset_bottom = 12.0
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("3_c6b18")
 theme_override_font_sizes/font_size = 100
 text = "Mopopeli"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 1081.0
+offset_top = 466.0
+offset_right = 1205.0
+offset_bottom = 502.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("3_c6b18")
+theme_override_font_sizes/font_size = 30
+text = "BBB&P"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_p28kt")
+autoplay = true
 
 [connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button_manager/Options" to="." method="_on_options_pressed"]

@@ -1,9 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://7i61f3di6rb2"]
+[gd_scene load_steps=6 format=3 uid="uid://7i61f3di6rb2"]
 
 [ext_resource type="Script" path="res://level_menu.gd" id="1_7dxrj"]
+[ext_resource type="Texture2D" uid="uid://c2no432u2ytjo" path="res://mops.png" id="2_qkw7r"]
+[ext_resource type="FontFile" uid="uid://d23k1fqtjvq37" path="res://joystix monospace.otf" id="3_mnr3g"]
+[ext_resource type="AudioStream" uid="uid://brceutmm1gi3n" path="res://Audio/Music (online-audio-converter.com).mp3" id="4_bjw4o"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7wa4y"]
+texture = ExtResource("2_qkw7r")
+modulate_color = Color(0.589096, 0.589096, 0.589096, 1)
 
 [node name="LevelMenu" type="Node2D"]
 script = ExtResource("1_7dxrj")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_7wa4y")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -13,37 +25,50 @@ offset_bottom = 40.0
 
 [node name="Level 1" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 214.0
-offset_top = 260.0
-offset_right = 409.0
+offset_left = 243.0
+offset_top = 256.0
+offset_right = 439.0
 offset_bottom = 363.0
-text = "Level 1
-"
+theme_override_colors/font_hover_color = Color(1, 0.47451, 0, 1)
+theme_override_fonts/font = ExtResource("3_mnr3g")
+text = "Level 1:
+Summer"
 
 [node name="Level 2" type="Button" parent="Control"]
 layout_mode = 1
-offset_left = 450.0
-offset_top = 258.0
-offset_right = 638.0
-offset_bottom = 365.0
-text = "Level 2"
+offset_left = 475.0
+offset_top = 256.0
+offset_right = 672.0
+offset_bottom = 363.0
+theme_override_colors/font_hover_color = Color(1, 0.47451, 0, 1)
+theme_override_fonts/font = ExtResource("3_mnr3g")
+text = "Level 2:
+Desert"
 
 [node name="Level 3" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 679.0
-offset_top = 258.0
-offset_right = 875.0
-offset_bottom = 366.0
-text = "Level 3
-"
+offset_left = 716.0
+offset_top = 256.0
+offset_right = 912.0
+offset_bottom = 364.0
+theme_override_colors/font_hover_color = Color(1, 0.47451, 0, 1)
+theme_override_fonts/font = ExtResource("3_mnr3g")
+text = "Level 3:
+Winter"
 
 [node name="MainMenu" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 10.0
-offset_top = 10.0
-offset_right = 109.0
-offset_bottom = 44.0
+offset_left = 507.0
+offset_top = 183.0
+offset_right = 635.0
+offset_bottom = 217.0
+theme_override_colors/font_hover_color = Color(1, 0.47451, 0, 1)
+theme_override_fonts/font = ExtResource("3_mnr3g")
 text = "Main Menu"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_bjw4o")
+autoplay = true
 
 [connection signal="pressed" from="Control/Level 1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="Control/Level 2" to="." method="_on_level_2_pressed"]
