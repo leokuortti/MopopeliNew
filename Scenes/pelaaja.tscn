@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://b6on3xx3nismd"]
+[gd_scene load_steps=7 format=3 uid="uid://b6on3xx3nismd"]
 
 [ext_resource type="Script" path="res://code/pelaaja.gd" id="1_0o10d"]
 [ext_resource type="PackedScene" uid="uid://b8lpll2do8n14" path="res://Scenes/rengas.tscn" id="1_746m3"]
 [ext_resource type="Texture2D" uid="uid://dqsff6hud28he" path="res://Images/Car/moponew.png" id="3_vexeq"]
 [ext_resource type="Texture2D" uid="uid://87fhctdad060" path="res://Images/Characters/ukko.png" id="4_m0br6"]
+[ext_resource type="AudioStream" uid="uid://ftep3wgkfcog" path="res://Audio/EngineSound.ogg" id="5_hyqmt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g28yq"]
 radius = 21.7386
@@ -54,6 +55,10 @@ collision_layer = 4
 position = Vector2(-32.2862, -80.6248)
 shape = SubResource("CircleShape2D_g28yq")
 one_way_collision_margin = 0.0
+
+[node name="EngineSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_hyqmt")
+volume_db = 2.5
 
 [connection signal="area_entered" from="Ukko/HeadArea" to="." method="_on_head_area_area_entered"]
 [connection signal="body_entered" from="Ukko/HeadArea" to="." method="_on_head_area_body_entered"]

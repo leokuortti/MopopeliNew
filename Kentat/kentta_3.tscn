@@ -36,7 +36,7 @@ point_in = Vector2(-374.244, 170.56)
 point_out = Vector2(1756.97, 234.92)
 properties = SubResource("Resource_1ehk0")
 
-[sub_resource type="Resource" id="Resource_dpm3b"]
+[sub_resource type="Resource" id="Resource_8imfu"]
 script = ExtResource("3_3dvsp")
 texture_idx = 0
 flip = false
@@ -47,9 +47,9 @@ script = ExtResource("4_lyn0i")
 position = Vector2(22350.6, 461.184)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
-properties = SubResource("Resource_dpm3b")
+properties = SubResource("Resource_8imfu")
 
-[sub_resource type="Resource" id="Resource_c1yay"]
+[sub_resource type="Resource" id="Resource_gs168"]
 script = ExtResource("3_3dvsp")
 texture_idx = 0
 flip = false
@@ -60,9 +60,9 @@ script = ExtResource("4_lyn0i")
 position = Vector2(22370.1, 5348.08)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
-properties = SubResource("Resource_c1yay")
+properties = SubResource("Resource_gs168")
 
-[sub_resource type="Resource" id="Resource_vsal6"]
+[sub_resource type="Resource" id="Resource_ccj6h"]
 script = ExtResource("3_3dvsp")
 texture_idx = 0
 flip = false
@@ -73,9 +73,9 @@ script = ExtResource("4_lyn0i")
 position = Vector2(-20251, 5205.88)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
-properties = SubResource("Resource_vsal6")
+properties = SubResource("Resource_ccj6h")
 
-[sub_resource type="Resource" id="Resource_5xpsp"]
+[sub_resource type="Resource" id="Resource_g3jhw"]
 script = ExtResource("3_3dvsp")
 texture_idx = 0
 flip = false
@@ -86,9 +86,9 @@ script = ExtResource("4_lyn0i")
 position = Vector2(-11769.4, 1539.81)
 point_in = Vector2(-1205.05, 254.831)
 point_out = Vector2(1193.06, -146.953)
-properties = SubResource("Resource_5xpsp")
+properties = SubResource("Resource_g3jhw")
 
-[sub_resource type="Resource" id="Resource_xba7s"]
+[sub_resource type="Resource" id="Resource_r3174"]
 script = ExtResource("3_3dvsp")
 texture_idx = 0
 flip = false
@@ -99,9 +99,9 @@ script = ExtResource("4_lyn0i")
 position = Vector2(-8575.99, 616.738)
 point_in = Vector2(-1205.89, 148.293)
 point_out = Vector2(1272.49, -224.402)
-properties = SubResource("Resource_xba7s")
+properties = SubResource("Resource_r3174")
 
-[sub_resource type="Resource" id="Resource_hmpid"]
+[sub_resource type="Resource" id="Resource_l5pov"]
 script = ExtResource("3_3dvsp")
 texture_idx = 0
 flip = false
@@ -112,9 +112,9 @@ script = ExtResource("4_lyn0i")
 position = Vector2(-5710.06, -168.584)
 point_in = Vector2(-921.222, -226.53)
 point_out = Vector2(998.404, 220.083)
-properties = SubResource("Resource_hmpid")
+properties = SubResource("Resource_l5pov")
 
-[sub_resource type="Resource" id="Resource_c5mvt"]
+[sub_resource type="Resource" id="Resource_3grb8"]
 script = ExtResource("3_3dvsp")
 texture_idx = 0
 flip = false
@@ -125,7 +125,7 @@ script = ExtResource("4_lyn0i")
 position = Vector2(-3237.45, 915.191)
 point_in = Vector2(-908.167, -89.7089)
 point_out = Vector2(511.454, 142.687)
-properties = SubResource("Resource_c5mvt")
+properties = SubResource("Resource_3grb8")
 
 [sub_resource type="Resource" id="Resource_gbh1f"]
 script = ExtResource("3_3dvsp")
@@ -140,7 +140,7 @@ point_in = Vector2(-1298.77, -271.836)
 point_out = Vector2(1050.64, 397.776)
 properties = SubResource("Resource_gbh1f")
 
-[sub_resource type="Resource" id="Resource_1vcjy"]
+[sub_resource type="Resource" id="Resource_hiqxe"]
 script = ExtResource("3_3dvsp")
 texture_idx = 0
 flip = false
@@ -151,7 +151,7 @@ script = ExtResource("4_lyn0i")
 position = Vector2(3360.83, 1682.43)
 point_in = Vector2(-1357.42, -433.703)
 point_out = Vector2(981.63, -80.0344)
-properties = SubResource("Resource_1vcjy")
+properties = SubResource("Resource_hiqxe")
 
 [sub_resource type="Resource" id="Resource_jtamw"]
 script = ExtResource("3_3dvsp")
@@ -166,7 +166,7 @@ point_in = Vector2(-2096.66, -696.624)
 point_out = Vector2(603.015, 59.2097)
 properties = SubResource("Resource_jtamw")
 
-[sub_resource type="Resource" id="Resource_s7fns"]
+[sub_resource type="Resource" id="Resource_f4c2h"]
 script = ExtResource("3_3dvsp")
 texture_idx = 0
 flip = false
@@ -177,9 +177,9 @@ script = ExtResource("4_lyn0i")
 position = Vector2(10059, 1071.07)
 point_in = Vector2(-673.814, 326.403)
 point_out = Vector2(972.911, -200.1)
-properties = SubResource("Resource_s7fns")
+properties = SubResource("Resource_f4c2h")
 
-[sub_resource type="Resource" id="Resource_hjfit"]
+[sub_resource type="Resource" id="Resource_gnx4u"]
 script = ExtResource("3_3dvsp")
 texture_idx = 0
 flip = false
@@ -190,9 +190,9 @@ script = ExtResource("4_lyn0i")
 position = Vector2(13860.8, 1706.27)
 point_in = Vector2(-811.582, 203.577)
 point_out = Vector2(830.609, -241.632)
-properties = SubResource("Resource_hjfit")
+properties = SubResource("Resource_gnx4u")
 
-[sub_resource type="Resource" id="Resource_b43l4"]
+[sub_resource type="Resource" id="Resource_75cpv"]
 script = ExtResource("3_3dvsp")
 texture_idx = 0
 flip = false
@@ -203,7 +203,7 @@ script = ExtResource("4_lyn0i")
 position = Vector2(17717.4, 338.107)
 point_in = Vector2(-860.813, 30.2041)
 point_out = Vector2(860.813, -30.2041)
-properties = SubResource("Resource_b43l4")
+properties = SubResource("Resource_75cpv")
 
 [sub_resource type="Resource" id="Resource_3j65p"]
 script = ExtResource("5_pn6x7")
@@ -280,7 +280,7 @@ fill_mesh_offset = 0.0
 render_offset = 0.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8hmqm"]
-size = Vector2(325, 697.25)
+size = Vector2(330.5, 703.625)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_lww5b"]
 lifetime_randomness = 0.49
@@ -349,7 +349,7 @@ offset_bottom = 64.0
 color = Color(0, 0, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maali"]
-position = Vector2(20577, 56)
+position = Vector2(20574.3, 59.1875)
 shape = SubResource("RectangleShape2D_8hmqm")
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
@@ -399,4 +399,4 @@ lifetime = 32.34
 stream = ExtResource("15_7ad42")
 autoplay = true
 
-[connection signal="body_entered" from="Maali" to="Pelaaja" method="_on_maali_body_entered"]
+[connection signal="body_entered" from="Maali" to="." method="_on_maali_body_entered"]

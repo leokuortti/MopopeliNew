@@ -7,9 +7,13 @@ var wheels = []
 @export var back_speed: float = 5000  # Reverse speed adjustment
 @export var move_speed: float = 500.0  # General movement speed
 
+var driving = 0
+
 # Called when the node is ready
 func _ready() -> void:
 	wheels = get_tree().get_nodes_in_group("wheel")
+	
+	$EngineSFX.play()
 
 	# Create the head area hitbox
 	var head_area = Area2D.new()
@@ -24,10 +28,12 @@ func _ready() -> void:
 
 # Handle physics and input
 func _physics_process(delta: float) -> void:
+	driving = 0
 	var torque_value = speed * delta
 
 	# Move right
 	if Input.is_action_pressed("move_right"):
+		driving += 1
 		apply_torque_impulse(-torque_value)  # Apply torque for right movement
 		for wheel in wheels:
 			if wheel.angular_velocity < max_speed:
@@ -35,6 +41,7 @@ func _physics_process(delta: float) -> void:
 
 	# Move left
 	if Input.is_action_pressed("move_left"):
+		driving += 1
 		apply_torque_impulse(torque_value)  # Apply torque for left movement
 		for wheel in wheels:
 			if wheel.angular_velocity < max_speed:
@@ -44,6 +51,10 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("restart"):
 		restart_level()
 
+	if driving == 1:
+		$EngineSFX.pitch_scale = lerp($EngineSFX.pitch_scale, 2.0, 2.0 * delta)
+	else:
+		$EngineSFX.pitch_scale = lerp($EngineSFX.pitch_scale, 1.0, 2.0 * delta)
 # Reloads the current level
 func restart_level() -> void:
 	var current_scene = get_tree().current_scene

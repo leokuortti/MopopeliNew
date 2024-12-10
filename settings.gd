@@ -6,7 +6,7 @@ func _on_volume_value_changed(value: float) -> void:
 
 
 func _on_mute_toggled(toggled_on: bool) -> void:
-	$AudioStreamPlayer.volume_db = -80 if toggled_on else 0
+	AudioServer.set_bus_mute(0, toggled_on) 
 
 
 func _on_exit_pressed() -> void:
