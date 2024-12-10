@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://ct0n7djmiehyg"]
+[gd_scene load_steps=53 format=3 uid="uid://ct0n7djmiehyg"]
 
 [ext_resource type="Script" path="res://Kentat/kentta_1.gd" id="1_18ko7"]
 [ext_resource type="PackedScene" uid="uid://b6on3xx3nismd" path="res://Scenes/pelaaja.tscn" id="1_e6av1"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dweubavc387o7" path="res://Images/Terrain/DirtBG.png" id="10_a25j2"]
 [ext_resource type="Script" path="res://addons/rmsmartshape/materials/shape_material.gd" id="11_kabqr"]
 [ext_resource type="PackedScene" uid="uid://cyb6o20pll60i" path="res://pause_menu.tscn" id="13_bnaeg"]
+[ext_resource type="Texture2D" uid="uid://ddtr21vjdxmud" path="res://Images/Other/Finish.png" id="14_47mst"]
 [ext_resource type="Texture2D" uid="uid://stjoy6wj465q" path="res://Images/Other/Clouds.png" id="14_tn6hp"]
 
 [sub_resource type="Resource" id="Resource_1ehk0"]
@@ -36,7 +37,7 @@ point_in = Vector2(-376.429, -95.5082)
 point_out = Vector2(1756.97, -52.7544)
 properties = SubResource("Resource_1ehk0")
 
-[sub_resource type="Resource" id="Resource_ss42s"]
+[sub_resource type="Resource" id="Resource_4gg4g"]
 script = ExtResource("3_lb4ol")
 texture_idx = 0
 flip = false
@@ -47,9 +48,9 @@ script = ExtResource("4_opqsd")
 position = Vector2(22355.3, 475.438)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
-properties = SubResource("Resource_ss42s")
+properties = SubResource("Resource_4gg4g")
 
-[sub_resource type="Resource" id="Resource_evldq"]
+[sub_resource type="Resource" id="Resource_wgx0b"]
 script = ExtResource("3_lb4ol")
 texture_idx = 0
 flip = false
@@ -60,9 +61,9 @@ script = ExtResource("4_opqsd")
 position = Vector2(22370.1, 5348.08)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
-properties = SubResource("Resource_evldq")
+properties = SubResource("Resource_wgx0b")
 
-[sub_resource type="Resource" id="Resource_5lhbv"]
+[sub_resource type="Resource" id="Resource_4agv4"]
 script = ExtResource("3_lb4ol")
 texture_idx = 0
 flip = false
@@ -73,9 +74,9 @@ script = ExtResource("4_opqsd")
 position = Vector2(-19351, 5249.39)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
-properties = SubResource("Resource_5lhbv")
+properties = SubResource("Resource_4agv4")
 
-[sub_resource type="Resource" id="Resource_s45aa"]
+[sub_resource type="Resource" id="Resource_a255v"]
 script = ExtResource("3_lb4ol")
 texture_idx = 0
 flip = false
@@ -86,9 +87,9 @@ script = ExtResource("4_opqsd")
 position = Vector2(-11697.5, 1288.09)
 point_in = Vector2(-1193.06, 15.1021)
 point_out = Vector2(1193.06, -15.1021)
-properties = SubResource("Resource_s45aa")
+properties = SubResource("Resource_a255v")
 
-[sub_resource type="Resource" id="Resource_bqh6t"]
+[sub_resource type="Resource" id="Resource_mw7yu"]
 script = ExtResource("3_lb4ol")
 texture_idx = 0
 flip = false
@@ -99,7 +100,7 @@ script = ExtResource("4_opqsd")
 position = Vector2(-8575.99, 616.738)
 point_in = Vector2(-1253.46, 15.1016)
 point_out = Vector2(1253.46, -15.1016)
-properties = SubResource("Resource_bqh6t")
+properties = SubResource("Resource_mw7yu")
 
 [sub_resource type="Resource" id="Resource_mlw5p"]
 script = ExtResource("3_lb4ol")
@@ -114,7 +115,7 @@ point_in = Vector2(-921.222, -226.53)
 point_out = Vector2(921.222, 226.53)
 properties = SubResource("Resource_mlw5p")
 
-[sub_resource type="Resource" id="Resource_w4rer"]
+[sub_resource type="Resource" id="Resource_a5fvv"]
 script = ExtResource("3_lb4ol")
 texture_idx = 0
 flip = false
@@ -125,7 +126,7 @@ script = ExtResource("4_opqsd")
 position = Vector2(-3754.17, 1095.67)
 point_in = Vector2(-649.386, -256.734)
 point_out = Vector2(649.386, 256.734)
-properties = SubResource("Resource_w4rer")
+properties = SubResource("Resource_a5fvv")
 
 [sub_resource type="Resource" id="Resource_gbh1f"]
 script = ExtResource("3_lb4ol")
@@ -140,7 +141,7 @@ point_in = Vector2(-1298.77, -271.836)
 point_out = Vector2(1298.77, 271.836)
 properties = SubResource("Resource_gbh1f")
 
-[sub_resource type="Resource" id="Resource_whp68"]
+[sub_resource type="Resource" id="Resource_5im6i"]
 script = ExtResource("3_lb4ol")
 texture_idx = 0
 flip = false
@@ -151,7 +152,7 @@ script = ExtResource("4_opqsd")
 position = Vector2(3219.65, 1053.82)
 point_in = Vector2(-981.63, -15.1021)
 point_out = Vector2(981.63, 15.1021)
-properties = SubResource("Resource_whp68")
+properties = SubResource("Resource_5im6i")
 
 [sub_resource type="Resource" id="Resource_jtamw"]
 script = ExtResource("3_lb4ol")
@@ -166,7 +167,7 @@ point_in = Vector2(-498.365, -211.428)
 point_out = Vector2(498.365, 211.428)
 properties = SubResource("Resource_jtamw")
 
-[sub_resource type="Resource" id="Resource_1olv4"]
+[sub_resource type="Resource" id="Resource_y712v"]
 script = ExtResource("3_lb4ol")
 texture_idx = 0
 flip = false
@@ -177,9 +178,9 @@ script = ExtResource("4_opqsd")
 position = Vector2(9264.76, 1385.85)
 point_in = Vector2(-709.793, -196.326)
 point_out = Vector2(709.793, 196.326)
-properties = SubResource("Resource_1olv4")
+properties = SubResource("Resource_y712v")
 
-[sub_resource type="Resource" id="Resource_f5gri"]
+[sub_resource type="Resource" id="Resource_2kq3l"]
 script = ExtResource("3_lb4ol")
 texture_idx = 0
 flip = false
@@ -190,9 +191,9 @@ script = ExtResource("4_opqsd")
 position = Vector2(13670, 2020.62)
 point_in = Vector2(-830.609, 241.632)
 point_out = Vector2(830.609, -241.632)
-properties = SubResource("Resource_f5gri")
+properties = SubResource("Resource_2kq3l")
 
-[sub_resource type="Resource" id="Resource_7t0xk"]
+[sub_resource type="Resource" id="Resource_w8i6j"]
 script = ExtResource("3_lb4ol")
 texture_idx = 0
 flip = false
@@ -203,7 +204,7 @@ script = ExtResource("4_opqsd")
 position = Vector2(17976, 431.285)
 point_in = Vector2(-860.813, 30.2041)
 point_out = Vector2(860.813, -30.2041)
-properties = SubResource("Resource_7t0xk")
+properties = SubResource("Resource_w8i6j")
 
 [sub_resource type="Resource" id="Resource_acxnn"]
 script = ExtResource("5_fikqm")
@@ -279,8 +280,11 @@ fill_texture_angle_offset = 0.0
 fill_mesh_offset = 0.0
 render_offset = 0.0
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fg0n6"]
+texture = ExtResource("14_47mst")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4fyhw"]
-size = Vector2(325, 697.25)
+size = Vector2(449.875, 467.25)
 
 [node name="Kentta1" type="Node2D"]
 script = ExtResource("1_18ko7")
@@ -294,6 +298,7 @@ zoom = Vector2(0.2, 0.2)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Pelaaja"]
 stream = ExtResource("3_83k04")
+volume_db = -7.5
 autoplay = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." groups=["Ground"]]
@@ -312,37 +317,17 @@ modulate = Color(1, 1, 1, 0.3)
 polygon = PackedVector2Array(-19248.4, 1268.86, -11697.5, 1288.09, -11272.2, 1255.53, -10882.7, 1178.94, -9424.76, 725.884, -9021.06, 649.302, -8575.99, 616.738, -7815.7, 553.29, -7296.11, 445.42, -6838.8, 382.855, -6577.76, 396.602, -6265.4, 455.325, -3754.17, 1095.67, -3610.63, 1123.67, -3426.67, 1114.91, -2956.23, 1008.22, -394.997, 166.394, 227.65, 63.2411, 510.541, 56.7814, 768.226, 87.4351, 1206.19, 206.387, 1561.14, 350.99, 2605.13, 934.678, 2885.75, 1019.11, 3219.65, 1053.82, 3576.81, 1090.13, 3911.92, 1178.27, 4515.2, 1453.21, 5448.31, 1999.84, 5565.5, 2025.63, 5726.27, 2026.11, 6155.06, 1965.49, 8439.08, 1428.69, 8917.42, 1364.54, 9110.4, 1362.71, 9264.76, 1385.85, 11422.1, 1867.47, 12731.1, 2050.98, 13271.3, 2070.77, 13491.4, 2055.47, 13670, 2020.62, 17056.8, 658.381, 17577.9, 498.338, 17976, 431.285, 22355.3, 475.438, 22370.1, 5348.08, -19351, 5249.39, -19440.9, 3223.31, -19423.2, 1850.53, -19360.9, 1412.48, -19311.6, 1297.82, -19248.4, 1268.86)
 
 [node name="Maali" type="Area2D" parent="."]
+position = Vector2(-1890, -25)
 
-[node name="ColorRect" type="ColorRect" parent="Maali"]
-offset_left = 20570.0
-offset_top = 59.0
-offset_right = 20732.0
-offset_bottom = 415.0
-color = Color(0.913725, 1, 1, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="Maali"]
-offset_left = 20408.0
-offset_top = -290.0
-offset_right = 20570.0
-offset_bottom = 66.0
-color = Color(0.913725, 1, 1, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="Maali"]
-offset_left = 20409.0
-offset_top = 61.0
-offset_right = 20571.0
-offset_bottom = 417.0
-color = Color(0, 0, 0, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="Maali"]
-offset_left = 20570.0
-offset_top = -292.0
-offset_right = 20732.0
-offset_bottom = 64.0
-color = Color(0, 0, 0, 1)
+[node name="Panel" type="Panel" parent="Maali"]
+offset_left = 20219.0
+offset_top = -51.0
+offset_right = 20887.0
+offset_bottom = 481.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_fg0n6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maali"]
-position = Vector2(20571, 63.625)
+position = Vector2(20647.9, 200)
 shape = SubResource("RectangleShape2D_4fyhw")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cimkxkivdsujt"]
+[gd_scene load_steps=5 format=3 uid="uid://cimkxkivdsujt"]
 
 [ext_resource type="Script" path="res://next_level_2.gd" id="1_2dd1d"]
 [ext_resource type="Texture2D" uid="uid://c2no432u2ytjo" path="res://mops.png" id="2_xuogu"]
 [ext_resource type="FontFile" uid="uid://d23k1fqtjvq37" path="res://joystix monospace.otf" id="3_ublgf"]
-[ext_resource type="AudioStream" uid="uid://brceutmm1gi3n" path="res://Audio/Music (online-audio-converter.com).mp3" id="4_5orao"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ykj8"]
 texture = ExtResource("2_xuogu")
@@ -58,10 +57,6 @@ theme_override_font_sizes/font_size = 50
 text = "Level completed"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_5orao")
-autoplay = true
 
 [connection signal="pressed" from="Control/Next level 2" to="." method="_on_next_level_2_pressed"]
 [connection signal="pressed" from="Control/MenuMenu" to="." method="_on_menu_menu_pressed"]

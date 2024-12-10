@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnbrjqrl2f80x"
-path="res://.godot/imported/Alarm.png-f4bc79ea12d8016ca2177f20630e8765.ctex"
+uid="uid://ddtr21vjdxmud"
+path="res://.godot/imported/Finish.png-1f240cd139e5ce833750f312dfc507a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Other/Alarm.png"
-dest_files=["res://.godot/imported/Alarm.png-f4bc79ea12d8016ca2177f20630e8765.ctex"]
+source_file="res://Images/Other/Finish.png"
+dest_files=["res://.godot/imported/Finish.png-1f240cd139e5ce833750f312dfc507a6.ctex"]
 
 [params]
 
